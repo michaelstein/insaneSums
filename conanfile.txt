@@ -1,0 +1,29 @@
+[build_requires]
+cmake/3.22.0
+
+[requires]
+qt/6.2.3
+cryptopp/8.5.0
+ms-gsl/4.0.0
+
+[generators]
+cmake
+cmake_find_package_multi
+virtualrunenv
+virtualenv
+virtualbuildenv
+
+[options]
+qt:shared=True
+qt:opengl=desktop
+qt:widgets=True
+qt:openssl=True
+
+[imports]
+lib, *.so.* -> bin
+lib, *.so -> bin
+bin, *.dll -> bin
+lib, *.dylib* -> bin
+
+res\archdatadir\plugins, * -> bin/plugins @ root_package=qt
+#qml, * -> bin/qt-qml @ root_package=qt
