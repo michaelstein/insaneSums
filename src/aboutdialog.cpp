@@ -14,14 +14,14 @@ AboutDialog::AboutDialog( QWidget *parent, Qt::WindowFlags flags )
 	QString qtversion = tr( "<a href=\"http://www.qt.io/\">Qt</a> %1" );
 	qtversion = qtversion.arg( QLatin1String( QT_VERSION_STR ) );
 
-	QString cryptoppversion = tr( "<a href=\"http://cryptopp.com/\">Crypto++</a> 5.6.2" );
+	QString cryptoppversion = tr( "<a href=\"http://cryptopp.com/\">Crypto++</a> 8.5.0" );
 
 	//: The authors of this program.
 	QString author = tr( "Michael Stein and Jonathan Wienß" );
 
 	ui.textLabel->setText( tr("%1<br/>"
 				"<br/>Developed by and copyright %2.<br/>"
-				"Licensed under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL</a>.<br/>"
+				"Licensed under the <a href=\"https://mit-license.org/\">MIT License</a>.<br/>"
 				"<br/>Uses %3 and %4."
 				).arg( version ).arg( author ).arg( qtversion ).arg( cryptoppversion ) );
 	ui.textLabel->setWordWrap( true );
